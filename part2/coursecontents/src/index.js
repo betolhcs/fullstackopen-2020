@@ -53,9 +53,9 @@ const App = () => {
     return (
         <div>
             <h1>Web development curriculum</h1>
-            <>{() => courses.forEach(displaycourse)}</>
-            <Course course={courses[0]} />
-            <Course course={courses[1]} /> 
+            <>
+                {(courses.map(course => <Course course={course} />)} 
+            </>
         </div>
     )
 }
